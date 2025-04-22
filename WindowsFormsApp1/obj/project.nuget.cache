@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "Meb6CzFeyUM=",
+  "success": true,
+  "projectFilePath": "E:\\Project_csharp\\WindowsFormsApp1\\WindowsFormsApp1\\WindowsFormsApp1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\yurar\\.nuget\\packages\\entityframework\\6.2.0\\entityframework.6.2.0.nupkg.sha512",
+    "C:\\Users\\yurar\\.nuget\\packages\\entityframework.ru\\6.2.0\\entityframework.ru.6.2.0.nupkg.sha512"
+  ],
+  "logs": []
+}
