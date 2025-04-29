@@ -17,6 +17,7 @@ namespace WindowsFormsApp1
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Devices()
         {
+            this.Parts_and_Materials = new HashSet<Parts_and_Materials>();
             this.Requests = new HashSet<Requests>();
         }
     
@@ -25,6 +26,8 @@ namespace WindowsFormsApp1
         public string serial_number { get; set; }
         public string repair_history { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Parts_and_Materials> Parts_and_Materials { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Requests> Requests { get; set; }
     }

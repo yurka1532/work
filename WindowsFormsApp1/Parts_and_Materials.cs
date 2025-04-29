@@ -17,5 +17,8 @@ namespace WindowsFormsApp1
         public int id { get; set; }
         public int costs { get; set; }
         public int lefted { get; set; }
+        public Nullable<int> DeviceId { get; set; }
+    
+        public virtual Devices Devices { get; set; }
     }
 }
