@@ -1,2 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
-<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" />
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)mstest.analyzers\3.8.3\buildTransitive\MSTest.Analyzers.targets" Condition="Exists('$(NuGetPackageRoot)mstest.analyzers\3.8.3\buildTransitive\MSTest.Analyzers.targets')" />
+  </ImportGroup>
+</Project>

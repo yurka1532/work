@@ -12,7 +12,11 @@
   <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <SourceRoot Include="C:\Users\yurar\.nuget\packages\" />
   </ItemGroup>
+  <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)mstest.analyzers\3.8.3\buildTransitive\MSTest.Analyzers.props" Condition="Exists('$(NuGetPackageRoot)mstest.analyzers\3.8.3\buildTransitive\MSTest.Analyzers.props')" />
+  </ImportGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgMSTest_Analyzers Condition=" '$(PkgMSTest_Analyzers)' == '' ">C:\Users\yurar\.nuget\packages\mstest.analyzers\3.8.3</PkgMSTest_Analyzers>
     <PkgEntityFramework Condition=" '$(PkgEntityFramework)' == '' ">C:\Users\yurar\.nuget\packages\entityframework\6.2.0</PkgEntityFramework>
   </PropertyGroup>
 </Project>

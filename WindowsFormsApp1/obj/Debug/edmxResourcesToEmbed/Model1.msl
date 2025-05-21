@@ -58,6 +58,7 @@
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="costs" ColumnName="costs" />
           <ScalarProperty Name="lefted" ColumnName="lefted" />
+          <ScalarProperty Name="DeviceId" ColumnName="DeviceId" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

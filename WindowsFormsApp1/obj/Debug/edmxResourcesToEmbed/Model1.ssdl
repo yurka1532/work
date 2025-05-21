@@ -52,6 +52,7 @@
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="costs" Type="int" Nullable="false" />
     <Property Name="lefted" Type="int" Nullable="false" />
+    <Property Name="DeviceId" Type="int" />
   </EntityType>
   <EntityType Name="Requests">
     <Key>
@@ -90,6 +91,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_Parts_and_Materials_Devices">
+    <End Role="Devices" Type="Self.Devices" Multiplicity="0..1" />
+    <End Role="Parts_and_Materials" Type="Self.Parts_and_Materials" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Devices">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Parts_and_Materials">
+        <PropertyRef Name="DeviceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_Requests_Devices1">
     <End Role="Devices" Type="Self.Devices" Multiplicity="1" />
     <End Role="Requests" Type="Self.Requests" Multiplicity="*" />
@@ -116,6 +129,10 @@
     <AssociationSet Name="FK_Orders_Masters" Association="Self.FK_Orders_Masters">
       <End Role="Masters" EntitySet="Masters" />
       <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Parts_and_Materials_Devices" Association="Self.FK_Parts_and_Materials_Devices">
+      <End Role="Devices" EntitySet="Devices" />
+      <End Role="Parts_and_Materials" EntitySet="Parts_and_Materials" />
     </AssociationSet>
     <AssociationSet Name="FK_Requests_Devices1" Association="Self.FK_Requests_Devices1">
       <End Role="Devices" EntitySet="Devices" />

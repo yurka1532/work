@@ -46,6 +46,10 @@
             "EntityFramework.ru": {
               "target": "Package",
               "version": "[6.2.0, )"
+            },
+            "MSTest.TestFramework": {
+              "target": "Package",
+              "version": "[3.8.3, )"
             }
           }
         }
